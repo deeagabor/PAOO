@@ -5,10 +5,9 @@
 
 class Student {
 public:
-    Student(const std::string& name);
+    Student(const std::string n, float g1, float g2, float g3);
 
-    void setGrades(double grade1, double grade2, double grade3);
-    double calculateAverage() const;
+    float calculateMedia() const;
     std::string getName() const;
 
 private:

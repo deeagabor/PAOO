@@ -5,13 +5,12 @@
 
 int main() {
 
-    Student student("John Doe");
+    Student student("John Doe", 10, 9, 7);
     
-    student.setGrades(85, 90, 78);
-    double average = student.calculateAverage();
+    float media = student.calculateMedia();
     
     std::cout << "Student: " << student.getName() << std::endl;
-    std::cout << "Media: " << average << std::endl;
+    std::cout << "Media: " << media << std::endl;
     
     return 0;
 }
