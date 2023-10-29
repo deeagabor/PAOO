@@ -3,8 +3,8 @@
 ### Build with CMake
 
 ```sh
-cd Project_build
-cmake ../Project
+cd build
+cmake ../src
 cmake --build .
-./Project
+./Main
 ```
