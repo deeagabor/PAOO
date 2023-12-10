@@ -10,7 +10,7 @@ void Semaphore::wait() {
     count--;
 }
 
-void Semaphore::notify() {
+void Semaphore::signal() {
     std::unique_lock<std::mutex> lock(mutex);
     ++count;
     condition.notify_one();

@@ -7,7 +7,7 @@ class Semaphore {
     public:
         Semaphore(int count = 0);
         void wait();
-        void notify();
+        void signal();
 
     private:
         std::mutex mutex;
