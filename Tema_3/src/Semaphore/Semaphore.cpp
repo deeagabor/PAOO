@@ -4,8 +4,10 @@ Semaphore::Semaphore(int count) : count(count) {}
 
 void Semaphore::wait() {
     std::unique_lock<std::mutex> lock(mutex);
-    condition.wait(lock, [this]() { return count > 0; });
-    --count;
+    while (count == 0) {
+        condition.wait(lock);
+    }
+    count--;
 }
 
 void Semaphore::notify() {
